@@ -4,9 +4,9 @@
 
 ## 1. Team Metadata
 - [GROUP_NAME]: [Điền Tên Nhóm Của Bạn]
-- [REPO_URL]: [Điền Link Github của Nhóm]
+- [REPO_URL]: https://github.com/NeedAvailableName/Lab13-Observability
 - [MEMBERS]:
-  - Member A: [Tên TV 1] | Role: Core Logging, Correlation & PII Security
+  - Member A: Đào Quang Thắng | Role: Core Logging, Correlation & PII Security
   - Member B: [Tên TV 2] | Role: Tracing Platform, LLM Observer & Load Testing
   - Member C: [Tên TV 3] | Role: Alerts, Metrics Dashboard & Demo Lead
 
@@ -22,8 +22,8 @@
 ## 3. Technical Evidence (Group)
 
 ### 3.1 Logging & Tracing
-- [EVIDENCE_CORRELATION_ID_SCREENSHOT]: [Thay dòng này bằng link ảnh chụp log có x-request-id ở terminal]
-- [EVIDENCE_PII_REDACTION_SCREENSHOT]: [Thay dòng này bằng link ảnh log thể hiện đã bị che dạng REDACTED_PHONE_VN]
+- [EVIDENCE_CORRELATION_ID_SCREENSHOT]: ![Correlation ID](./assets/log1.png)
+- [EVIDENCE_PII_REDACTION_SCREENSHOT]: ![PII Redaction](./assets/log2.png)
 - [EVIDENCE_TRACE_WATERFALL_SCREENSHOT]: [Thay dòng này bằng link ảnh chụp chi tiết sơ đồ rẽ nhánh Trace trong Langfuse UI]
 - [TRACE_WATERFALL_EXPLANATION]: Khi bóc tách chi tiết một Trace, hệ thống đo lường rành mạch 2 giai đoạn: Nhịp 1 là thời gian Vector DB truy xuất ngữ cảnh (RAG: Retrieve) và Nhịp 2 là thời gian Model Claude genarate ra Output. Các thông số Cost và Token đã được theo vết hoàn toàn dưới micro-second thông qua @observe() decorators.
 
@@ -37,7 +37,7 @@
 | Cost Budget | < $2.5/day | 1d | [Lấy số Cost ở Langfuse] |
 
 ### 3.3 Alerts & Runbook
-- [ALERT_RULES_SCREENSHOT]: [Đưa link ảnh chụp màn hình file config/alert_rules.yaml vào đây]
+- [ALERT_RULES_SCREENSHOT]: ![Alert Rules](./assets/log3.png)
 - [SAMPLE_RUNBOOK_LINK]: docs/alerts.md#1-high-latency-p95
 
 ---
@@ -53,7 +53,7 @@
 
 ## 5. Individual Contributions & Evidence
 
-### [Tên TV 1]
+### Đào Quang Thắng
 - [TASKS_COMPLETED]: Can thiệp thành công Context Variable để đẩy tự động mã hóa Correlation ID Hex 8 kí tự. Setup hệ phòng thủ PII Scrubbing (Regex nhận dạng SĐT VNam, Passport ID) cản chặn mọi nguy cơ rò rỉ lên Cloud.
 - [EVIDENCE_LINK]: [Link tới Commit chứa file app/main.py, app/pii.py, app/middleware.py]
 
